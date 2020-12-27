@@ -78,7 +78,7 @@ export class AppService {
   }
 
   private checkUpdate(): void {
-    this.http.get('https://api.github.com/repos/UnchartedBull/OctoDash/releases/latest').subscribe(
+    this.http.get('https://api.github.com/repos/onekintaro/OctoDash/releases/latest').subscribe(
       (data: GitHubReleaseInformation): void => {
         if (this.version !== data.name.replace('v', '')) {
           this.updateAvailable = true;
